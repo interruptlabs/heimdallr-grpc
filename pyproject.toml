@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "heimdallr-grpc"
+version = "0.4.0"
+description = "Provides gRPC library for Heimdallr"
+authors = ["Robert S <info@interruptlabs.co.uk>"]
+readme = "README.md"
+packages = [{include = "heimdallr-grpc"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+protobuf = "^4.21.12"
+grpcio = "^1.51.1"
+
+[tool.poetry.group.dev.dependencies]
+grpcio-tools = "^1.51.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

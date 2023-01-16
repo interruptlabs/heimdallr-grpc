@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package heimdallr_grpc;
+
+// The IDA service definition.
+
+service idaRPC {
+  // Goto an address in file diassembly
+  rpc disasmGoTo (GoToRequest) returns (ResponseCode);
+  rpc pseudoGoTo (GoToRequest) returns (ResponseCode);
+  rpc genericGoTo (GoToRequest) returns (ResponseCode);
+}
+
+message GoToRequest {
+    // hex values for request
+    string address = 1;
+    string size = 2;
+}
+
+enum ResponseCodes {
+    Resp_Success = 0;
+    Resp_GenericError = 1;
+
+}
+
+message ResponseCode {
+    ResponseCodes Response = 1;
+}
+
+
