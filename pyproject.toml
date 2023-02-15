@@ -4,7 +4,7 @@ version = "0.4.0"
 description = "Provides gRPC library for Heimdallr"
 authors = ["Robert S <info@interruptlabs.co.uk>"]
 readme = "README.md"
-packages = [{include = "heimdallr-grpc"}]
+packages = [{include = "heimdallr_grpc"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
